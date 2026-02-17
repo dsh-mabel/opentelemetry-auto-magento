@@ -15,7 +15,7 @@ class CliAutoRootSpan
 {
     use LogsMessagesTrait;
 
-    public static function create(CliRootSpanAttributes $attributes)
+    public static function create(CliRootSpanAttributes $attributes): void
     {
         $tracer = Globals::tracerProvider()->getTracer(
             'com.codewave.opentelemetry.magento.auto-root-span',
