@@ -8,7 +8,6 @@ use OpenTelemetry\API\Instrumentation\CachedInstrumentation;
 use OpenTelemetry\API\Trace\Span;
 use OpenTelemetry\API\Trace\StatusCode;
 use OpenTelemetry\Context\Context;
-use OpenTelemetry\SemConv\TraceAttributes;
 use Throwable;
 
 trait MagentoHookTrait
@@ -47,9 +46,7 @@ trait MagentoHookTrait
         $span = Span::fromContext($scope->context());
 
         if ($exception) {
-            $span->recordException($exception, [
-                TraceAttributes::EXCEPTION_ESCAPED => true,
-            ]);
+            $span->recordException($exception);
             $span->setStatus(StatusCode::STATUS_ERROR, $exception->getMessage());
         }
 
