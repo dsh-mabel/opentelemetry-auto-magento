@@ -1,6 +1,5 @@
 {
     "name": "cdwv/opentelemetry-auto-magento",
-    "homepage": "https://github.com/cdwv/opentelemetry-auto-magento",
     "description": "OpenTelemetry auto-instrumentation for Magento 2 Framework",
     "type": "library",
     "license": "MIT",
