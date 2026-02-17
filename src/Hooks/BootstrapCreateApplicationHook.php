@@ -6,7 +6,7 @@ namespace Codewave\OpenTelemetry\Magento\Hooks;
 
 use Magento\Framework\App\Bootstrap;
 use OpenTelemetry\Context\Context;
-use OpenTelemetry\SemConv\TraceAttributes;
+use OpenTelemetry\SemConv\Attributes\CodeAttributes;
 use Throwable;
 
 use function OpenTelemetry\Instrumentation\hook;
@@ -24,10 +24,9 @@ class BootstrapCreateApplicationHook
                 $builder = $this->instrumentation
                     ->tracer()
                     ->spanBuilder('Bootstrap::createApplication')
-                    ->setAttribute(TraceAttributes::CODE_FUNCTION, $function)
-                    ->setAttribute(TraceAttributes::CODE_NAMESPACE, $class)
-                    ->setAttribute(TraceAttributes::CODE_FILEPATH, $filename)
-                    ->setAttribute(TraceAttributes::CODE_LINENO, $lineno);
+                    ->setAttribute(CodeAttributes::CODE_FUNCTION_NAME, $function)
+                    ->setAttribute(CodeAttributes::CODE_FILE_PATH, $filename)
+                    ->setAttribute(CodeAttributes::CODE_LINE_NUMBER, $lineno);
 
                 $parent = Context::getCurrent();
                 $span = $builder->startSpan();
