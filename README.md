@@ -1,7 +1,5 @@
 # OpenTelemetry Auto Instrumentation for Magento 2 Framework
 
-**This is a fork for Mabel's Labels**. [See the original repository here.](https://github.com/cdwv/opentelemetry-auto-magento)
-
 This package provides minimal auto-instrumentation for Magento 2 application.
 
 Work is still in progress, so all the span names can (and probably will) change.
