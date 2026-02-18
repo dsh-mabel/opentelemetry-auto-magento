@@ -3,7 +3,7 @@
     "description": "OpenTelemetry auto-instrumentation for Magento 2 Framework",
     "type": "library",
     "license": "MIT",
-    "version": "v0.0.13",
+    "version": "0.0.13",
     "autoload": {
         "psr-4": {
             "Codewave\\OpenTelemetry\\Magento\\": "src/"
