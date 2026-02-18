@@ -3,7 +3,7 @@
     "description": "OpenTelemetry auto-instrumentation for Magento 2 Framework",
     "type": "library",
     "license": "MIT",
-    "version": "v0.0.12",
+    "version": "v0.0.13",
     "autoload": {
         "psr-4": {
             "Codewave\\OpenTelemetry\\Magento\\": "src/"
@@ -16,6 +16,10 @@
         {
             "name": "Grzegorz Daszuta",
             "email": "grzegorz.daszuta@codewave.pl"
+        },
+        {
+            "name": "Dave Smith-Hayes",
+            "email": "dave.smithhayes@mabelslabels.com"
         }
     ],
     "require": {
